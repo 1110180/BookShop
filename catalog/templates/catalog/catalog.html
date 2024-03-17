@@ -1,0 +1,180 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load catalog_tags %}
+
+{% block  modal_cart %}
+{% include 'includes/cart_button.html' %}
+{% endblock  %}
+
+{% block  css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock  %}
+
+
+{% block  content %}
+    <div class="row">
+        <!-- Форма фильтров -->
+        <div class="dropdown mb-2">
+            <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Фильтры
+            </button>
+
+            <form action="{% if request.GET.q %}{% url 'catalog:search' %}{% else %}{% url 'catalog:index' slug_url %}{% endif %}" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="sale" id="flexCheckDefault" value="on" {% if request.GET.sale == 'on' %}checked{% endif %}>
+
+                    {% if request.GET.q %}
+                        <input type="hidden" name="q" value="{{ request.GET.q }}">
+                    {% endif %}
+
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Товары по акции
+                    </label>
+                </div>
+
+                <p class="text-white mx-3 mt-3">Сортировать:</p>
+
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order" id="flexRadioDefault1" value="default"
+                        {% if not request.GET.order or request.GET.order == 'default' %}checked{% endif %}>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        По умолчанию
+                    </label>
+                </div>
+
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order" id="flexRadioDefault2" value="price" 
+                        {% if request.GET.order == 'price' %}checked{% endif %}>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        От дешевых к дорогим
+                    </label>
+                </div>
+
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order" id="flexRadioDefault3" value="-price" 
+                        {% if request.GET.order == '-price' %}checked{% endif %}>
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        От дорогих к дешевым
+                    </label>
+                </div>
+            
+                <div class="form-group">
+                    <div class="form-check text-white mx-3">
+                        <input class="form-check-input" type="radio" name="age_limit" id="ageLimitUnder18" value="18"
+                            {% if request.GET.age_limit == '18' %}checked{% endif %}>
+                        <label class="form-check-label" for="ageLimitUnder18">
+                            Книги 18+
+                        </label>
+                    </div>
+                    <div class="form-check text-white mx-3">
+                        <input class="form-check-input" type="radio" name="age_limit" id="ageLimitUnder16" value="16"
+                            {% if request.GET.age_limit == '16' %}checked{% endif %}>
+                        <label class="form-check-label" for="ageLimitUnder16">
+                            Книги 16+
+                        </label>
+                    </div>
+                    <div class="form-check text-white mx-3">
+                        <input class="form-check-input" type="radio" name="age_limit" id="ageLimitUnder16" value="12"
+                            {% if request.GET.age_limit == '12' %}checked{% endif %}>
+                        <label class="form-check-label" for="ageLimitUnder16">
+                            Книги 12+
+                        </label>
+                    </div>
+                    <div class="form-check text-white mx-3">
+                        <input class="form-check-input" type="radio" name="age_limit" id="ageLimitNoLimit" value="0"
+                            {% if request.GET.age_limit == '0' %}checked{% endif %}>
+                        <label class="form-check-label" for="ageLimitNoLimit">
+                            Без ограничений
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mx-3 mt-3">Применить</button>
+            </form>
+        </div>
+
+        
+            {% if request.GET.q %}
+                <h3 class="mt-4 poisk_text">Результаты поиска по запросу <strong><i>{{request.GET.q}}</i></strong> </h3>
+            {% if not goods %}
+                
+                <h2 class="mt-4 poisk_text"> Ничего не найдено. </h2>
+      
+        {% endif %}
+        {% endif%}
+        {% for product in goods %}
+            <!-- Карта товара -->
+            <div class="col-lg-4 col-md-6 p-4">
+                <div class="card border-primary rounded custom-shadow">
+                    {% if product.image %}
+                        <img src="{{product.image.url}}" class="card-img-top" alt="{{product.title}}">
+                    {% else %}
+                        <img src="{% static "/deps/images/Not found image.png" %}" class="card-img-top" alt="...">
+                    {% endif %}
+
+                    <div class="card-body" id="text_catalog">
+                        <a href="{% url 'catalog:product' product.slug %}">
+                            <p class="card-title">{{ product.title|truncatechars:33 }}</p>
+                        </a>
+                        <p class="card-text">{{ product.summary|truncatechars:50}}</p>
+                        <p class="card-text text-truncate">{{ product.age_limit }} +</p>
+                        {% comment %} <p class="product_id">id: {{ product.display_id }}</p> {% endcomment %}
+                        <div class="d-flex justify-content-between">
+
+                            {% if product.discount %}
+                                <p><s>{{ product.price }} </s> ₽ </p>
+                                <p><strong>{{ product.calculate_price }} ₽</strong></p>
+                                <span class="badge bg-warning text-dark"> - {{ product.discount }} %</span>
+                            {% else %}
+                                <p><strong>{{ product.price }} ₽</strong></p>
+                            {% endif %}
+                            
+                            <a href="{% url 'cart:cart_add' %}" class="btn add-to-cart" 
+                            data-product-id="{{ product.id }}">
+                                {% csrf_token %}
+                                <img class="mx-1" src="{% static "/deps/icons/cart-plus.svg" %}" alt="Catalog Icon"
+                                    width="32" height="32">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </div>
+    <!-- Пагинация -->
+    {% if goods %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center my-4">
+                <div class="custom-shadow d-flex">
+                    <li class="page-item {% if not goods.has_previous %} disabled {% endif %}">
+                    <a class="page-link" href="{% if goods.has_previous %}?{% chang_params page=goods.previous_page_number %}{% else %}#{% endif %}">Предыдущая</a>
+                    </li>
+
+                    {% for page in goods.paginator.page_range%}
+                    {% if page >= goods.number|add:-2 and page <= goods.number|add:2 %}
+                        <li class="page-item {% if goods.number == page %} active {% endif %}">
+                            <a class="page-link" href="?{% chang_params page=page %}">{{page}}</a>
+                        </li>
+                    {% endif %}
+                    {% endfor %}
+
+
+                    <li class="page-item {% if not goods.has_next %} disabled {% endif %}">
+                        <a class="page-link" href="{% if goods.has_next %}?{% chang_params page=goods.next_page_number %}{% else %}#{% endif %}">Следующая</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    {% endif %}
+{% endblock  %}
+
+{% block  footer %}
+    <footer class="bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">BOOK &copy; Studio 2024</p>
+        </div>
+    </footer>
+{% endblock  %}

@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block  content %}
+    <!-- Контент на странице -->
+    <div class="container mt-5">
+        <div class="card mb-4 custom-shadow" id="conteiner_my">
+            <div class="row">
+                <!-- Миниатюры -->
+                <div class="col-md-4">
+                    {% if authors.photo and authors.photo.url %}
+                        <img src="{{ authors.photo.url }}" class="card-img-top"  id="image-radius" alt="{{authors.last_name}}">
+                    {% else %}
+                        <img src="{% static "/deps/images/Not found image_auther.png" %}" class="card-img-top" id="image-radius" alt="...">
+                    {% endif %}
+                </div>
+                
+              
+            <!-- Описание товара -->
+            <div class="card-body">
+                <h5 class="card-text"><strong>ФИО: </strong> {{ authors.last_name }} </h5>
+                <h5 class="card-text"><strong>Год рождения: </strong> {{ authors.date_of_birth }}</h5>
+                <h5 class="card-text"><strong>Краткая информация об авторе:</strong> {{ authors.description }}</h5>
+                
+            </div>
+        </div>
+    </div>
+{% endblock  %}

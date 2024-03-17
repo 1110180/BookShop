@@ -1,0 +1,56 @@
+.title h1{
+	font-size: 30px;
+	color: #fcfffc;
+	margin-bottom: 40px;
+}
+
+.list_menu a{
+	font-size: 18px;
+	color: #fcfffc;
+	border-left: 2px solid rgb(204, 153, 204);
+	transition: 0.2s ease;
+	padding-left: 5px;
+}
+
+.list_menu a:hover{
+	border-left: 3px solid rgb(102,51, 102);
+	transition: 0.2s ease;
+	padding-left: 5px;
+}
+
+.list_menu li{
+	margin: 20px 0;
+    list-style: none; 
+}
+
+.list_menu {
+	margin-bottom: 50px;
+}
+
+.menu{
+    text-shadow: 5px 4px 5px black;
+    box-shadow: 5px 5px 25px 5px rgb(0, 0, 0);
+    padding: 5vh 10px;
+    background: rgba(247, 247, 247, 0.11);
+    height: 86vh;
+    border: 1px solid #ffffff;
+    border-right: 15px solid #fcfffc;
+    position: fixed;
+    left: -255px;
+    transition: 0.4s ease;
+}
+
+.menu:hover{
+    left: 0;
+    transition: 0.5s ease;
+}
+
+
+
+
+.img_book {
+    height: auto;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+}

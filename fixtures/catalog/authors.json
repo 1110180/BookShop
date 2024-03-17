@@ -1,0 +1,145 @@
+[
+    {
+      "model": "catalog.authors",
+      "pk": 1,
+      "fields": {
+        "last_name": "Крис Хедфилд",
+        "slug": "kris-hedfild",
+        "date_of_birth": "1959-03-29",
+        "description": "Канадский астронавт Крис Хедфилд - известный певец-космонавт, автор научно-популярных книг. Первый космонавт-канадец в открытом космосе и командир международной космической станции. Всего в космосе провел 166 дней.",
+        "photo": "catalog_photo/2_rrar4M2.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 2,
+      "fields": {
+        "last_name": "Линдгрен Астрид",
+        "slug": "lindgren-astrid",
+        "date_of_birth": "1907-11-14",
+        "description": "Астрид Линдгрен – шведская писательница. Жила и работала в маленьком городке Виммербю в Швеции, который стал прототипом всех ее книг.\\n\\nДети всего мира любят ее книги, переведенные более чем на 90 языков, и героев ее книг – Пеппи Длинныйчулок, Карлсона, который живет на крыше.",
+        "photo": "catalog_photo/Астрид.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 3,
+      "fields": {
+        "last_name": "Нет информации",
+        "slug": "net-informacii",
+        "date_of_birth": "1111-01-01",
+        "description": "-",
+        "photo": ""
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 4,
+      "fields": {
+        "last_name": "Ольга Примаченко",
+        "slug": "olga-primachenko",
+        "date_of_birth": "1980-03-12",
+        "description": "Ольга Примаченко — журналист, писатель, автор-основатель интернет-проекта LADY.TUT.BY, автор книги Gnezdo.by. Живет в Берлине с мужем и дочерью.",
+        "photo": "catalog_photo/olga_B5AU9ox.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 5,
+      "fields": {
+        "last_name": "Дарья Часовая",
+        "slug": "darya-chasovaya",
+        "date_of_birth": "1995-01-01",
+        "description": "Современная писательница.",
+        "photo": ""
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 6,
+      "fields": {
+        "last_name": "Стеллани Шталь",
+        "slug": "stefani-shtal",
+        "date_of_birth": "1963-12-27",
+        "description": "Стеллани Шталь — американская писательница и переводчица с немецкого и итальянского языков, автор книги «Читая как писатель».",
+        "photo": "catalog_photo/Стеллани_Шталь_TUHqOvn.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 7,
+      "fields": {
+        "last_name": "Сидоров Виталий",
+        "slug": "sidorov-vitalij",
+        "date_of_birth": "1930-12-07",
+        "description": "Заслуженный учитель Российской Федерации В. В. Сидоров успешно сочетает педагогическую и общественную работу с научной и литературной деятельностью. В педагогической науке он известен как автор многочисленных научных работ по проблемам развития, воспитания и обучения детей.",
+        "photo": "catalog_photo/Сидоров.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 8,
+      "fields": {
+        "last_name": "Луиза Мэй Олкотт",
+        "slug": "luiza-mej-olkott",
+        "date_of_birth": "1832-11-29",
+        "description": "Луиза Мэй Олкотт — американская писательница, работавшая в разных жанрах: романы, драмы, психологические. Наиболее известна по автобиографическому роману «Маленькие женщины» и его продолжениям. Источник: <https://biographe.ru/uchenie/louisa-alcott>",
+        "photo": "catalog_photo/Луиза_Мэй.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 9,
+      "fields": {
+        "last_name": "Бедный Борис Владимирович",
+        "slug": "bednyj-boris",
+        "date_of_birth": "1916-08-12",
+        "description": "Борис Владимирович Бедный — советский драматург, сценарист.",
+        "photo": "catalog_photo/boris-bednyj_2kPOfEe.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 10,
+      "fields": {
+        "last_name": "Трейси Вульф",
+        "slug": "trejsi-vulf",
+        "date_of_birth": "1960-10-27",
+        "description": "Трейси Вульф — американская писательница, автор 64 книг в жанре романа, включая те, что были признаны бестселлерами по версии New York Times и USA Today. В своих произведениях она объединяет элементы мистики и романтики, что привлекает читателей всех возрастов. Она пишет как под собственным именем, так и под псевдонимами Tracy Deebs и Tessa Adams.",
+        "photo": "catalog_photo/Трейси_Вульф_zMDoaer.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 11,
+      "fields": {
+        "last_name": "Pol Diego",
+        "slug": "pol-diego",
+        "date_of_birth": "1111-01-01",
+        "description": "Diego focuses his research on the remarkable biodiversity of dinosaur-era animals preserved as fossils in Patagonia. There, he and his team have discovered fossils of more than 20 new vertebrate species, including dinosaurs and crocs. The most famous, and among the most exciting, is the titanosaur Patagotitan mayorum, a 122-foot plant-eater estimated to have weighed 70 tons. Diego has authored or coauthored more than 130 research papers on fossils found around the world. These include a 2020 Nature article, written with Mark and a team of collaborators, challenging the long-held notion that all dinosaur eggs had hard shells by providing evidence that the earliest dinosaurs laid eggs with soft shells.",
+        "photo": "catalog_photo/pol-diego_nDhHRe2.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 12,
+      "fields": {
+        "last_name": "Братья Стругацкие",
+        "slug": "bratya-strugackie",
+        "date_of_birth": "1111-01-01",
+        "description": "Аркадий Натанович (28 августа 1925, Батуми — 12 октября 1991, Москва) и Борис Натанович (15 апреля 1933, Ленинград — 19 ноября 2012, Санкт-Петербург) обрели мировую славу как авторы научно-фантастических произведений, отразивших наиболее значимые тенденции в развитии мировой цивилизации.",
+        "photo": "catalog_photo/Братья_1_e8SwDR7.jpg"
+      }
+    },
+    {
+      "model": "catalog.authors",
+      "pk": 13,
+      "fields": {
+        "last_name": "Лей Ми",
+        "slug": "lej-mi",
+        "date_of_birth": "1978-05-01",
+        "description": "Лей Ми — китайская писательница, известная в мире благодаря своей трилогии «Наследие Пора». Пишет на английском языке, ее книги переведены на 36 языков и опубликованы в 48 странах.",
+        "photo": ""
+      }
+    }
+  ]

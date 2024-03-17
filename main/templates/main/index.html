@@ -1,0 +1,37 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block  css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock  %}
+
+{% comment %} {% block  modal_cart %}
+{% include 'includes/cart_button.html' %}
+{% endblock  %} {% endcomment %}
+
+{% block content %}
+    <h3 class="text_glava">
+        <strong>
+            <h1 class="mt-5 pt-5"><strong> {{content}} </strong></h1>
+         </strong>
+    </h3>
+    <br>
+    <br>
+    <h3 class="text_glava"><i><strong> Мир Книг </strong></i> - это не просто магазин, это целая вселенная, полная захватывающих историй и новых знаний. Погрузитесь в неё вместе с нами!
+        <br>
+        <br>У нас есть всё: от классической литературы до современных бестселлеров, от научной фантастики до учебников.
+        <br>
+        <br>Добро пожаловать в наш уникальный онлайн-магазин!
+        <br>
+        <br>
+        <br>
+        <strong><i class="your-text-class">"Тот, кто не читает, не имеет преимуществ перед тем, кто не умеет читать."</i></strong></h3>
+{% endblock  %}
+
+{% block footer %}
+    <footer class="bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">BOOK &copy; Studio 2024</p>
+        </div>
+    </footer>
+{% endblock  %}

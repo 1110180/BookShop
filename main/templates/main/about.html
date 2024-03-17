@@ -1,0 +1,65 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block  css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock  %}
+
+{% comment %} {% block  modal_cart %}
+{% include 'includes/cart_button.html' %}
+{% endblock  %} {% endcomment %}
+
+{% block content %}
+    
+    <div class="text_glava">
+        <h1 class="text_glava"><i><strong> {{ content }} </strong></i></h1>
+        <br>
+        <h4 class='text_glava'> Мы - магазин книг, который предлагает широкий выбор книг разных жанров и авторов. Мы стремимся предоставлять нашим клиентам качественные издания и отличный сервис. В нашем магазине вы найдете как новинки, так и классические произведения мировой литературы. </h4>
+        <br>
+        <h4 class='text_glava'> Не стесняйтесь посетить наш магазин и окунуться в мир книг!</h4>
+    </div>
+    <br>
+    <!-- Карусель -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Индикаторы/точки-->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static "/deps/images/1.jpg" %}" alt="Los Angeles" class="d-block" style="width:30%">
+        <div class="carousel-caption">
+            <br>
+          <h3>Лицензия онлайн-магазина "МИР КНИГ"</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static "/deps/images/2.jpg" %}" alt="Chicago" class="d-block" style="width:30%">
+        <div class="carousel-caption">
+            <br>
+          <h3>Грамота о лучшем онлайн-магазине</h3>
+        </div> 
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+{% endblock  %}
+
+{% block footer %}
+    <footer class="bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">BOOK &copy; Studio 2024</p>
+        </div>
+    </footer>
+{% endblock  %}

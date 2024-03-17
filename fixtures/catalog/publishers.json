@@ -1,0 +1,107 @@
+[
+    {
+      "model": "catalog.publishers",
+      "pk": 1,
+      "fields": {
+        "name": "Альпина Паблишер",
+        "slug": "alpina-pablisher"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 2,
+      "fields": {
+        "name": "Махаон",
+        "slug": "mahaon"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 3,
+      "fields": {
+        "name": "Clever",
+        "slug": "clever"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 4,
+      "fields": {
+        "name": "БОМБОРА",
+        "slug": "bombora"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 5,
+      "fields": {
+        "name": "Дарья Часовая",
+        "slug": "darya-chasovaya"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 6,
+      "fields": {
+        "name": "РИОР",
+        "slug": "rior"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 7,
+      "fields": {
+        "name": "АСТ",
+        "slug": "ast"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 8,
+      "fields": {
+        "name": "Азбука",
+        "slug": "azbuka"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 9,
+      "fields": {
+        "name": "Like Book",
+        "slug": "like-book"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 10,
+      "fields": {
+        "name": "Scholastic",
+        "slug": "scholastic"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 11,
+      "fields": {
+        "name": "Медный Всадник",
+        "slug": "mednyj-vsadnik"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 12,
+      "fields": {
+        "name": "Neoclassic",
+        "slug": "neoclassic"
+      }
+    },
+    {
+      "model": "catalog.publishers",
+      "pk": 13,
+      "fields": {
+        "name": "Эксмо",
+        "slug": "eksmo"
+      }
+    }
+  ]
+  

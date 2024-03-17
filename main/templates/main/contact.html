@@ -1,0 +1,49 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block  css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock  %}
+
+{% comment %} {% block  modal_cart %}
+{% include 'includes/cart_button.html' %}
+{% endblock  %} {% endcomment %}
+
+{% block content %}
+<div class="text_glava">
+    <h1 class="text_glava"><i><strong> Контактная информация </strong></i></h1>
+    <div id="text_p">
+        <h3 class='text_glava'> Наш телефон:</h3>
+        <h4 class='text_glava'> +7 800 707-37-27, звонок по РФ бесплатный.</h4>
+        <br> 
+        <h3 class='text_glava'> Наша электронная почта:</h3>
+        <h4 class='text_glava'>hello_book@mail.ru</h4>
+    </div>
+    <br>
+    <div id="text_p">
+        <h3 class='text_glava'> Время работы:</h3>
+        <h4 class='text_glava'> 
+            Мы работаем с 10 до 20 по Московскому времени. Если вы позвонили в нерабочее время, мы с вами свяжемся утром следующего рабочего дня. Сообщения обрабатываются тоже в рабочее время.
+            </h4>
+    </div>
+        <br>
+        <div id="text_p">
+            <h3> Расположение главного офиса :</h3>
+        <div id="map-test" class="map"></div>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=4d3da9b5-6251-4a68-a6ea-33ab99c73806&lang=ru_RU"></script>
+        <br>   
+    </div>
+    
+    {% comment %} <div id="map" style="width: 600px; height: 400px">
+
+    </div> {% endcomment %}
+</div>
+{% endblock  %}
+
+{% block footer %}
+    <footer class="bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">BOOK &copy; Studio 2024</p>
+        </div>
+    </footer>
+{% endblock  %}
